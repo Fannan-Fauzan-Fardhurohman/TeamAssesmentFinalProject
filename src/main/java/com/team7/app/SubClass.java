@@ -208,7 +208,7 @@ public class SubClass {
                 default:
                     System.out.println("Menu tidak tersedia");
             }
-            System.out.println("Apakah anda ingin menghitung ulang ? [Y/T]");
+            System.out.println("Apakah anda ingin menambah barang ? [Y/T]");
             ulang = br.readLine();
         }
         hitungHarga();
@@ -349,7 +349,7 @@ public class SubClass {
         float fullwidth[] = {threecol * 3};
         Paragraph onesp = new Paragraph("\n");
 
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
         String dateNow = formatter.format(date);
 
@@ -361,7 +361,7 @@ public class SubClass {
         nestedTable.addCell(getHeaderTextCell("Invoice No"));
         nestedTable.addCell(getHeaderTextCellValue("IX259920"));
         nestedTable.addCell(getHeaderTextCell("Invoice Date"));
-        nestedTable.addCell(getHeaderTextCellValue("19/08/2020"));
+        nestedTable.addCell(getHeaderTextCellValue(dateNow));
         table.addCell(new Cell().add(nestedTable).setBorder(Border.NO_BORDER));
 
         Border bd = new SolidBorder(Color.GRAY, 2f);

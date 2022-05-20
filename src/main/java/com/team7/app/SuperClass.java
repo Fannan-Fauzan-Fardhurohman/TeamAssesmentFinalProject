@@ -10,7 +10,7 @@ public class SuperClass {
         obj.transaksi();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("ingin generate struk?");
+        System.out.println("ingin generate struk? [Y/T]");
         String generated = scanner.next();
         if(generated.equalsIgnoreCase("y")){
             obj.generateInvoice();
